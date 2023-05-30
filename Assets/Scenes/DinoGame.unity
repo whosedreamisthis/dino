@@ -391,7 +391,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 6e83fe14b38770848a81bde35979769b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: 19.62
-  jumpForce: 400
+  jumpForce: 450
 --- !u!50 &928969422
 Rigidbody2D:
   serializedVersion: 4
@@ -484,6 +484,67 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: d09670286df46ab469702c1be3ec617b, type: 3}
   - {fileID: 21300000, guid: 7a7f6b70da11c454381c3b9525f36642, type: 3}
+--- !u!1 &1248546978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248546980}
+  - component: {fileID: 1248546979}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1248546979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248546978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d4c5939b7b8b04a98c2d043152e496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - prefab: {fileID: 3302942353354799059, guid: f534070d4019f8b45949514d95b5acc0, type: 3}
+    spawnChance: 0.2
+  - prefab: {fileID: 3274300412030305141, guid: 99cd55b22d8c45c4692037b6eec80ebf, type: 3}
+    spawnChance: 0.18
+  - prefab: {fileID: 4471522735793933125, guid: b4553e00fa5498c4f8f8e882164a5265, type: 3}
+    spawnChance: 0.16
+  - prefab: {fileID: 8455292025849135300, guid: 6f25209918716de4191d3b9a7a672be0, type: 3}
+    spawnChance: 0.14
+  - prefab: {fileID: 8481843895635943486, guid: bf071c89633042344b945f832ccf25a5, type: 3}
+    spawnChance: 0.12
+  - prefab: {fileID: 4954472726577915332, guid: b1b91890b73384b40bb64c64c58f359e, type: 3}
+    spawnChance: 0.1
+  - prefab: {fileID: 1034231513109851050, guid: 82121169c5e4bf44c8e40701c2aac0a0, type: 3}
+    spawnChance: 0.05
+  minSpawnRate: 1
+  maxSpawnRate: 2
+--- !u!4 &1248546980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248546978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.67, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455661217
 GameObject:
   m_ObjectHideFlags: 0
