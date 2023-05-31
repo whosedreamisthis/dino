@@ -48,4 +48,12 @@ public class Player : MonoBehaviour
             isGrounded = false;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            GameManager.Instance.GameOver();
+        }
+    }
 }
