@@ -41,7 +41,9 @@ public class GameManager : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
+        LoadHighScore();
         NewGame();
+
     }
     public void NewGame()
     {
@@ -74,11 +76,23 @@ public class GameManager : MonoBehaviour
         spawner.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(true);
+        UpdateHighScore();
+    }
 
+    public void UpdateHighScore()
+    {
         if (score > highScore)
         {
             highScore = score;
             highScoreText.text = Mathf.FloorToInt(highScore).ToString("D5");
+            PlayerPrefs.SetFloat("highScore", highScore);
         }
     }
+
+    public void LoadHighScore()
+    {
+        highScore = PlayerPrefs.GetFloat("highScore", 0);
+        highScoreText.text = Mathf.FloorToInt(highScore).ToString("D5");
+    }
+
 }
